@@ -1,0 +1,28 @@
+{
+  "name": "shieldamm-contracts",
+  "version": "1.0.0",
+  "description": "private dex",
+  "main": "index.js",
+  "scripts": {
+    "node": "npx hardhat node",
+    "compile": "forge build",
+    "test": "npx hardhat test",
+    "compile:hasher": "ts-node ./script/compileHasher.ts",
+    "deploy:hasher": "HARDHAT_NETWORK=localhost ts-node --files ./script/deployHasher.ts",
+    "deploy:local": "forge script script/deploy.s.sol:DeployScript --rpc-url http://127.0.0.1:8545/ --broadcast"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "ethers": "^6.11.1",
+    "hardhat": "^2.22.2"
+  },
+  "dependencies": {
+    "circomlibjs": "^0.1.7",
+    "mkdirp": "^3.0.1",
+    "solmate": "^6.2.0"
+  }
+}
