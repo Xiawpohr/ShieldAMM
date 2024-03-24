@@ -49,7 +49,7 @@ Recursive proofs allows for the verification of a smart proof inside another pro
 - BaseToken: 0xE5Fb43b8AE0eFA84b5718437Bb8B0528fAd65eB4
 - QuoteToken: 0xF3d2905747F1F0Ae8E8062E31a6626f936e3C72d
 
-### Polygon
+### Polygon (Updating...)
 - Hasher: []()
 - TokenDepositVerifier: []()
 - SwapVerifier: []()
@@ -59,7 +59,7 @@ Recursive proofs allows for the verification of a smart proof inside another pro
 - BaseToken: 
 - QuoteToken: 
 
-### Optimism
+### Optimism (Updating...)
 - Hasher: []()
 - TokenDepositVerifier: []()
 - SwapVerifier: []()
@@ -69,7 +69,7 @@ Recursive proofs allows for the verification of a smart proof inside another pro
 - BaseToken: 
 - QuoteToken: 
 
-### Linea
+### Linea (Updating...)
 - Hasher: []()
 - TokenDepositVerifier: []()
 - SwapVerifier: []()
@@ -79,7 +79,7 @@ Recursive proofs allows for the verification of a smart proof inside another pro
 - BaseToken: 
 - QuoteToken: 
 
-### ThunderCore
+### ThunderCore (Updating...)
 - Hasher: []()
 - TokenDepositVerifier: []()
 - SwapVerifier: []()
@@ -87,7 +87,7 @@ Recursive proofs allows for the verification of a smart proof inside another pro
 - RemoveLiquidityVerifier: []()
 - ShieldAMM: []()
 
-### Ten Protocol
+### Ten Protocol (Updating...)
 - Hasher: []()
 - TokenDepositVerifier: []()
 - SwapVerifier: []()
