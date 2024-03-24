@@ -3,7 +3,7 @@ use dep::std;
 fn main(
     commitment_after_add_liquidity: pub Field,
     liquidity_amount: Field,
-    priv_key : Field,
+    signature: Field,
     secret: Field,
     deposit_verification_key : [Field; 114], 
     deposit_proof : [Field; 93], 
@@ -39,11 +39,7 @@ fn main(
     assert(liquidity_amount == amount_out);
 
     // verify note commitment after adding liquidity
-    let pubkey = std::scalar_mul::fixed_base_embedded_curve(priv_key, 0);
-    let pubkey_x = pubkey[0];
-    let pubkey_y = pubkey[1];
-
-    let note_commitment = std::hash::pedersen_hash([pubkey_x, pubkey_y, liquidity_amount, secret]);
+    let note_commitment = std::hash::pedersen_hash([liquidity_amount, signature, secret]);
 
     assert(commitment_after_add_liquidity == note_commitment);
 }

@@ -5,7 +5,7 @@ fn main(
     quote_token: pub Field,
     commitment_after_swap: pub Field,
     expected_amount_out: Field,
-    priv_key : Field,
+    signature: Field,
     secret: Field,
     deposit_verification_key : [Field; 114], 
     deposit_proof : [Field; 93], 
@@ -42,16 +42,12 @@ fn main(
     assert(expected_amount_out == amount_out);
 
     // verify note commitment after swapping tokens
-    let pubkey = std::scalar_mul::fixed_base_embedded_curve(priv_key, 0);
-    let pubkey_x = pubkey[0];
-    let pubkey_y = pubkey[1];
-
     let mut to_token = quote_token;
     if (from_token == quote_token) {
         to_token = base_token;
     }
 
-    let note_commitment = std::hash::pedersen_hash([pubkey_x, pubkey_y, to_token, expected_amount_out, secret]);
+    let note_commitment = std::hash::pedersen_hash([to_token, expected_amount_out, signature, secret]);
 
     assert(commitment_after_swap == note_commitment);
 }
