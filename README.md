@@ -87,7 +87,7 @@ Recursive proofs allows for the verification of a smart proof inside another pro
 - RemoveLiquidityVerifier: []()
 - ShieldAMM: []()
 
-### Ten Protocol (Updating...)
+### Ten Protocol 
 - Hasher: []()
 - TokenDepositVerifier: []()
 - SwapVerifier: []()
